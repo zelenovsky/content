@@ -21,11 +21,17 @@
       margin: 0;
     }
 
-    .container {
-      display: flex;
+    form {
+      display: grid;
       box-sizing: border-box;
       padding: 0;
       margin: 0;
+      column-gap: 35px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "input output"
+        "submit submit";
     }
 
     .title {
@@ -37,11 +43,11 @@
     }
 
     .inputBlock {
+      grid-area: input;
       display: flex;
       flex-direction: column;
       border-radius: 6px;
       padding: 10px;
-      margin-right: 35px;
     }
 
     textarea {
@@ -60,6 +66,7 @@
     }
 
     button {
+      grid-area: submit;
       display: block;
       min-width: 300px;
       width: 100%;
@@ -88,6 +95,7 @@
     }
 
     .outputBlock {
+      grid-area: output;
       display: flex;
       flex-direction: column;
       border-radius: 6px;
@@ -110,21 +118,20 @@
 
 <body>
 <form id="converter">
-  <div class="container">
-    <div class="inputBlock">
-      <label for="code">
-        <h2 class="title">Что преобразуем</h2>
-      </label>
-      <textarea id="code"></textarea>
-    </div>
-    <div class="outputBlock">
-      <h2 class="title">Результат</h2>
-      <span class="output" id="output"></span>
-    </div>
+  <div class="inputBlock">
+    <label for="code">
+      <h2 class="title">Что преобразуем</h2>
+    </label>
+    <textarea id="code"></textarea>
   </div>
   <button type="submit">
     <span class="buttonLabel">Перевести в формат JSON</span>
   </button>
+  <div class="outputBlock">
+    <h2 class="title">Результат</h2>
+    <span class="output" id="output">
+    </span>
+  </div>
 </form>
 
 <script>
