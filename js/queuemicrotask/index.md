@@ -1,6 +1,6 @@
 ---
 title: "`queueMicrotask()`"
-description: "Брат `setTimeout`, или как добавить синхронную функцию в очередь микрозадач"
+description: "Брат `setTimeout()`, или как добавить синхронную функцию в очередь микрозадач."
 authors:
   - corocoto
 contributors:
@@ -9,6 +9,10 @@ keywords:
   - macrotasks
   - microtasks
   - sync-to-async
+related:
+  - js/async-in-js
+  - js/how-the-browser-creates-pages
+  - js/web-app-works
 tags:
   - doka
 ---
@@ -21,7 +25,7 @@ tags:
 
 `queueMicrotask()`:
 - Принимает функцию, которая будет передана в очередь микрозадач;
-- Возвращает `undefined`.
+- Возвращает [`undefined`](/js/undefined/).
 
 ```js
 queueMicrotask(() => {
@@ -141,7 +145,7 @@ _Какую проблему тут можно заметить?_
 
 В теле одного условия используется цепочка промисов, в другом — обычное синхронное выполнение. Из этого можно сделать вывод, что в разных условиях, процесс выполнения также будет отличаться.
 
-Для наглядности, навесим обработчик на событие `submit`, в котором будет происходить вызов функции `getData`:
+Для наглядности, навесим обработчик на событие `submit`, в котором будет происходить вызов функции `getData()`:
 
 ```js
 const form = document.querySelector('.logging-form')
@@ -157,7 +161,7 @@ const handleFormSubmit = (e) => {
 form.addEventListener('submit', handleFormSubmit)
 ```
 
-Не забываем про кастомное событие `data-loaded`, инициируемое внутри функции `getData`. Навесим обработчик и на него:
+Не забываем про кастомное событие `data-loaded`, инициируемое внутри функции `getData()`. Навесим обработчик и на него:
 
 ```js
 const output = document.querySelector('.logging-form__output')
