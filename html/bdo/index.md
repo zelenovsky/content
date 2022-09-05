@@ -1,5 +1,6 @@
 ---
 title: "`<bdo>`"
+description: "Вставляем текст с направлением письма, отличным от письма слева направо."
 authors:
   - gingerraccoon
 editors:
@@ -7,6 +8,10 @@ editors:
 keywords:
   - текст
   - двунаправленный
+related:
+  - css/flexbox-guide
+  - css/position
+  - css/grid-guide
 tags:
   - doka
 ---
