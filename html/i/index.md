@@ -1,10 +1,15 @@
 ---
 title: "`<i>`"
+description: "Обозначаем изменение интонации в тексте."
 authors:
   - gkhabada
 keywords:
   - курсив
   - италик
+related:
+  - html/strong
+  - html/em
+  - html/dfn
 tags:
   - doka
 ---
