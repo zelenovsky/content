@@ -10,6 +10,10 @@ editors:
   - tachisis
 keywords:
   - форма
+related:
+  - html/input
+  - js/deal-with-forms
+  - html/screenreaders
 tags:
   - doka
 ---
